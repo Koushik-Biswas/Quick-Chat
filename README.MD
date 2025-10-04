@@ -100,53 +100,7 @@
 
 ## 🧩 System Architecture
 
-```mermaid
-flowchart TD
-    subgraph ReactApp[Client • React/Vite SPA]
-        UIComponents[UI Components & Pages]
-        Contexts[AuthContext & ChatContext]
-        HttpClient[REST Client]
-        SocketClient[Socket.IO Client]
-    end
 
-    subgraph ExpressAPI[Server • Express App]
-        Routes[Route Definitions]
-        Controllers[Controller Layer]
-        Services[Service & Utility Layer]
-        AuthMW[JWT Middleware]
-        SocketServer[Socket.IO Gateway]
-        CloudinaryAdapter[Cloudinary Integration]
-        DBAdapter[Mongoose Connection]
-    end
-
-    subgraph MongoDB[MongoDB Atlas]
-        UsersColl[Users Collection]
-        MessagesColl[Messages Collection]
-    end
-
-    subgraph CloudinarySvc[Cloudinary]
-        MediaStore[Media Asset Store]
-    end
-
-    UIComponents --> Contexts
-    Contexts <--> HttpClient
-    Contexts <--> SocketClient
-    HttpClient --> Routes
-    Routes --> AuthMW
-    AuthMW --> Controllers
-    Controllers --> Services
-    Services --> DBAdapter
-    DBAdapter --> UsersColl
-    DBAdapter --> MessagesColl
-    Controllers --> CloudinaryAdapter
-    CloudinaryAdapter --> CloudinarySvc
-    SocketClient <--> SocketServer
-    SocketServer --> MessagesColl
-    SocketServer --> Contexts
-    CloudinarySvc -. status .-> Contexts
-```
-
----
 
 ## 🗂️ Repository Layout
 
