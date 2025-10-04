@@ -100,7 +100,7 @@
 
 ## 🧩 System Architecture
 
-https://github.com/Koushik-Biswas/Quick-Chat/blob/main/Screenshot%202025-10-04%20210535.png?raw=true
+![image alt](https://github.com/Koushik-Biswas/Quick-Chat/blob/main/Screenshot%202025-10-04%20210535.png?raw=true)
 
 ## 🗂️ Repository Layout
 
