@@ -356,7 +356,9 @@ Enhance with coverage thresholds and pre-commit hooks as suite matures.
 
 ## License
 
-All rights reserved by Koushik Biswas © 2025.
+Distributed under the [MIT License](LICENSE).
+
+Copyright (c) 2025-2026 Koushik Biswas.
 
 ---
 
